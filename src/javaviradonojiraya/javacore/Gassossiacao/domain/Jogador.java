@@ -10,6 +10,8 @@ public class Jogador {
     Jogador N -- time 1 (relação muitos para 1)
     Estudante N -- N cursos (relação muitos para muitos)
      */
+
+    //Nesse exemplo se trata da relação um (time) para muitos (jogador)
     private String nome;
     private Time time;
 
