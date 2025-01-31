@@ -1,9 +1,9 @@
 package javaviradonojiraya.javacore.Hheranca.domain;
 
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa {
     private double salario;
 
-    /**
+    /*
      *
      *     Herança fala da extensão das funcionalidades de alguma classe, no exemplo, temos um funcionario que além das caractéristicas
      *     da classe pessoa, inclui uma outra, que nesse caso seria um salário;
@@ -28,9 +28,30 @@ public class Funcionario extends Pessoa{
      *     No entando, o uso desse modificador libera o acesso aos atributos para todas as outras classes que estiverem no mesmo
      *     pacote que a classe "mãe"
      *
+     *     Por padrão todo
+     *
      */
+    static {
+        System.out.println("Dentro do bloco estatico da classe Funcionario");
+    }
 
-    public void imprime(){
+    {
+        System.out.println("Bloco de inicialização da classe Funcionario");
+    }
+
+    {
+        System.out.println("Bloco de inicialização da classe Funcionario");
+    }
+
+    public Funcionario(String nome) {
+        super(nome);
+        System.out.println("Dentro do construtor da classe Funcionario");
+        //usando a função super, para chamar o construtor da classe mãe (Pessoa) para que seja inicializado sempre que uma
+        //nova sub classe seja criada, agora sempre que um novo funcionário for criádo será necessário informar ao menos um nome.
+    }
+
+
+    public void imprime() {
         super.imprime();
         /*
           metodo super faz com que consiga chamar um metodo da classe mais generica (superclass), nesse caso a
@@ -40,11 +61,12 @@ public class Funcionario extends Pessoa{
         System.out.println(this.salario);
     }
 
-    public void relatorioSalario(){
-        System.out.println("Eu " + this.nome + " recebi o salario de: " +this.salario);
+    public void relatorioSalario() {
+        System.out.println("Eu " + this.nome + " recebi o salario de: " + this.salario);
 
         //tendo acesso a atributos diretos da classe mãe (superclass) devido ao modificador protected
     }
+
     public double getSalario() {
         return salario;
     }
