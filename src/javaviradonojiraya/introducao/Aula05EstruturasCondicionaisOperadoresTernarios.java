@@ -9,8 +9,8 @@ public class Aula05EstruturasCondicionaisOperadoresTernarios {
         //A sintaxe do operador ternario é:  (condição)? verdadeiro : falso
 
         double salario = 6000;
-        String mensagemDoar = "Eu vou fazer o L e comer picanha";
-        String mensagemNaoDoar = "Não vou fazer o L, prefiro pão com rato";
+        String mensagemDoar = "Toma uma ajuda ai";
+        String mensagemNaoDoar = "Não tenho dinheiro, foi mal";
 //        String resultado;
 //
 //        if (salario >5000) {

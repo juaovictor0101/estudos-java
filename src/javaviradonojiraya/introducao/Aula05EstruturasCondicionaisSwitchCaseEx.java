@@ -8,10 +8,10 @@ public class Aula05EstruturasCondicionaisSwitchCaseEx {
         byte dia = 7;
                 switch (dia){
                     case 1:
-                        System.out.println("Final de semana, dia de tomar gelo!!");
+                        System.out.println("Final de semana!!");
                         break;
                     case 2:
-                        System.out.println("Pior dia da semana :( ");
+                        System.out.println("Dia de começar a dieta ");
                         break;
                     case 3:
                         System.out.println("Dia útil");
