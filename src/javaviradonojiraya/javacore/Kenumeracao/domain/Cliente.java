@@ -1,11 +1,6 @@
 package javaviradonojiraya.javacore.Kenumeracao.domain;
 
 public class Cliente {
-    public enum TipoPagamento{
-        DEBITO, CREDITO
-        //É possível usar enumeração diretamente dentro da classe também
-    }
-
     private String nome;
     private TipoCliente tipoCliente;
     private TipoPagamento tipoPagamento;
@@ -21,7 +16,7 @@ public class Cliente {
     public String toString() {
         return "Cliente{" +
                 "nome='" + nome + '\'' +
-                ", tipoCliente=" + tipoCliente.nomeR +
+                ", tipoCliente=" + tipoCliente.getNomeRelatorio() +
                 ", tipoClienteInt=" + tipoCliente.VALOR +
                 ", tipoPagamento=" + tipoPagamento +
                 '}';

@@ -5,11 +5,32 @@ public enum TipoCliente {
     PESSOA_JURIDICA(2, "Pessoa jurídica");
 
     public final int VALOR;
-    public final String nomeR;
+    private String nomeRelatorio;
 
     TipoCliente(int valor, String nomeRelatorio) {
         this.VALOR = valor;
-        this.nomeR = nomeRelatorio;
+        this.nomeRelatorio = nomeRelatorio;
+    }
+
+    public static TipoCliente tipoPorNomeRelatorio(String nomeRelatorio) {
+        for (TipoCliente tipoCliente : values()) {
+            if (tipoCliente.getNomeRelatorio().equals(nomeRelatorio)) {
+                return tipoCliente;
+            }
+        }
+        return null; //criação de metodo que faz busca no baseado no atributo que está sendo passado e retorna um dos atributos, e null caso não seja um dos atributos desejados;
+    }
+
+    public int getVALOR() {
+        return VALOR;
+    }
+
+    public String getNomeRelatorio() {
+        return nomeRelatorio;
+    }
+
+    public void setNomeRelatorio(String nomeRelatorio) {
+        this.nomeRelatorio = nomeRelatorio;
     }
     //usando construtores em enumerações
 
@@ -20,3 +41,4 @@ public enum TipoCliente {
      */
 
 }
+
