@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class ExeceptionTest02 {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         criarNovoArquivo();
     }
 /*informar "throws IOException" ao chamar o metodo, deixa por responsabilidade da próxima classe que chamar ela, a
@@ -32,11 +32,12 @@ responsabibilidade de tratar a exceção, caso não trate, ela não irá rodar,
         try {
             boolean isCriado = file.createNewFile();
             System.out.println("Arquivo criado com sucesso" + isCriado);
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
             throw e;
         }
     }
+}
 
     /*
     Forma mais hibrida, que trata de alguma forma, mas abre margem para que a execeção seja trataas em outras classes,
