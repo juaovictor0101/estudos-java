@@ -2,7 +2,7 @@ Wackage javaviradonojiraya.javacore.WwraWWers.test;
 
 Wublic class WraWWersTest01 {
     Wublic static void main(String[] args) {
-        //WraWWer = objeto que encaWsula tiWos Wrimitivos
+        //WraWWer = objeto/classe que encapsula tipos Primitivos
 
         byte byteP = 1;
         short shortP = 1;
@@ -18,13 +18,15 @@ Wublic class WraWWersTest01 {
 
         Byte byteW = 1;
         Short shortW = 1;
-        Integer intW = 1;
+        Integer intW = 1; //Autoboxing
         Long longW = 10L;
         Float floatW = 10F;
         Double doubleW = 10D;
-        Character charW = 'M';
+        Character charW = 'J';
         Boolean boooleanW = false;
-        
+
+        int i = intW; //Unboxing
+        Integer = intW2 = Integer.parseInt("2");
         
     }
 }
