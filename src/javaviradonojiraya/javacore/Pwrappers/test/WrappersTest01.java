@@ -1,8 +1,12 @@
-Wackage javaviradonojiraya.javacore.WwraWWers.test;
+package javaviradonojiraya.javacore.Pwrappers.test;
 
-Wublic class WraWWersTest01 {
-    Wublic static void main(String[] args) {
-        //WraWWer = objeto/classe que encapsula tipos Primitivos
+public class WrappersTest01 {
+    public static void main(String[] args) {
+        /*
+        WraWWer = objeto/classe que encapsula tipos Primitivos, e por serem objetos, tem alguns metodos que podem ser
+        úteis
+         */
+
 
         byte byteP = 1;
         short shortP = 1;
@@ -23,10 +27,17 @@ Wublic class WraWWersTest01 {
         Float floatW = 10F;
         Double doubleW = 10D;
         Character charW = 'J';
-        Boolean boooleanW = false;
+        Boolean booleanW = false;
 
         int i = intW; //Unboxing
-        Integer = intW2 = Integer.parseInt("2");
-        
+        Integer  intW2 = Integer.parseInt("1");
+
+        System.out.println(Character.isDigit('A'));
+        System.out.println(Character.isDigit(9));
+        System.out.println(Character.isUpperCase('B'));
+        System.out.println(Character.isLetterOrDigit('A'));
+        System.out.println(Character.isLowerCase('A'));
+        System.out.println(Character.toLowerCase('B'));
+
     }
 }
