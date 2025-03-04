@@ -5,9 +5,10 @@ package javaviradonojiraya.javacore.Jmodificadorfinal.domain;
 public  class Carro {
     private String nome;
     public final Comprador COMPRADOR2 = new Comprador();
-    /*Aqui está especificando que a referência que a variavél oussui para o objeto, não pode ser alterada, mesmo que
+
+    /*Aqui está especificando que a referência que a variavél possui para o objeto, não pode ser alterada, mesmo que
     seja criado um outro objeto com a referência "comprador" carro, só teria essa referência, mas apesar de não poder mudar
-    a referência não possa ser mudada, é possível alterar os atributos
+    a referência, é possível alterar os atributos
             */
 
 
