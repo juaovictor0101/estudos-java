@@ -10,7 +10,7 @@ public class BufferedWriterTest01 {
         File file = new File("file.txt");
         try (FileWriter fw = new FileWriter(file, true);
              BufferedWriter bw = new BufferedWriter(fw)) {
-            bw.write("Teste 123, teste 123, escrevendo no arquivo ");
+            bw.write( "Teste 123, teste 123, escrevendo no arquivo ");
             bw.newLine();
             bw.flush();
         }catch (IOException ex) {

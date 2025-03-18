@@ -14,7 +14,7 @@ public class DataBaseLoader  implements DataLouder, DataRemover{
 
     @Override
     public void load() {
-        System.out.println("Carrando dados do banco de dados");
+        System.out.println("Carregando dados do banco de dados");
     }
 
     @Override

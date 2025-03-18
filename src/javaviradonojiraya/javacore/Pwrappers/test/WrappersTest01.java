@@ -29,8 +29,10 @@ public class WrappersTest01 {
         Character charW = 'J';
         Boolean booleanW = false;
 
+
         int i = intW; //Unboxing
         Integer  intW2 = Integer.parseInt("1");
+        floatW.toString();
 
         System.out.println(Character.isDigit('A'));
         System.out.println(Character.isDigit(9));
