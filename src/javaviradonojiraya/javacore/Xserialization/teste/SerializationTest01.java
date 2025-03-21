@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 
 public class SerializationTest01 {
     public static void main(String[] args) {
-        //**Ao ler um objeto serializado, o construtor não é ultilizado, atenção ao usar isso em classes com herança.
+        //** Ao ler um objeto serializado, o construtor não é ultilizado, atenção ao usar isso em classes com herança.
         Aluno aluno = new Aluno(1L, "João", "Jaum123456");
 //        serializar(aluno);
         deserializar();
