@@ -9,7 +9,7 @@ public class SetTest01 {
     public static void main(String[] args) {
         /*
         hashset não armazena valores iguais, ou seja não há duplicidade, e ele ordena de acordo com o hashcode.
-        caso seja necessário mostras os elementos na ordem de inserção é possível usar o LinkedHashSet
+        caso seja necessário mostrar os elementos na ordem de inserção é possível usar o LinkedHashSet
 
          */
         Set< Manga> mangas = new HashSet<>();
