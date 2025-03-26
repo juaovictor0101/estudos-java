@@ -18,8 +18,20 @@ public class MapTest03 {
         Manga manga4 = new Manga(3L, "Dragon Ball Z", 29.99);
         Manga manga5 = new Manga(2L, "Death Note", 20.00);
 
+        List<Manga> mangaConsumidor1List = List.of(manga1, manga2, manga5);
+        List<Manga> mangaConsumidor2List = List.of(manga3, manga4, manga5);
+
         Map<Consumidor, List<Manga>> consumidorManga = new HashMap<>();
-        
+        consumidorManga.put(consumidor1, mangaConsumidor1List);
+        consumidorManga.put(consumidor2, mangaConsumidor2List);
+
+        for (Map.Entry<Consumidor, List<Manga>> entry : consumidorManga.entrySet()) {
+            System.out.println("---" + entry.getKey().getNome());
+            for (Manga manga : entry.getValue()) {
+                System.out.println("-------" + manga.getNome());
+            }
+
+        }
 
     }
 }
