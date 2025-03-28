@@ -14,4 +14,8 @@ public class WildCardTest02 {
         }
 
     }
+    private static void printConsultaAnimal (List<? super Animal> animals){
+        animals.add(new Gato());
+        animals.add(new Cachorro());
+    }
 }
