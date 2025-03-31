@@ -15,7 +15,7 @@ public class MethodReferenceTest04 {
         Supplier<AnimeComparators> newAnimeComparators = AnimeComparators::new;
         AnimeComparators animeComparators = newAnimeComparators.get();
         List<Anime> animeList = new ArrayList<>(List.of(new Anime("Naruto", 25), new Anime("One Piece", 50), new Anime("Fullmetal Alchemist", 57)));
-        animeList.sort(animeComparators.compareByEpisodesNonStatic());
+//        animeList.sort(animeComparators.compareByEpisodesNonStatic());
         System.out.println(animeList);
 
 
