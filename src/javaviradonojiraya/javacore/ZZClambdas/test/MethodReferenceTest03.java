@@ -1,4 +1,4 @@
-package javaviradonojiraya.javacore.ZZBcomportamentos.test;
+package javaviradonojiraya.javacore.ZZClambdas.test;
 
 import java.util.ArrayList;
 import java.util.List;

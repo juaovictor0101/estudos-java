@@ -1,7 +1,7 @@
-package javaviradonojiraya.javacore.ZZBcomportamentos.test;
+package javaviradonojiraya.javacore.ZZClambdas.test;
 
-import javaviradonojiraya.javacore.ZZClambdas.Domain.Anime;
-import javaviradonojiraya.javacore.ZZClambdas.Service.AnimeComparators;
+import javaviradonojiraya.javacore.ZZClambdas.domain.Anime;
+import javaviradonojiraya.javacore.ZZClambdas.service.AnimeComparators;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class MethodReferenceTest04 {
         System.out.println(animeList);
 
 
-        BiFunction<String, Integer, Anime> animeBiFunction = (title,episodes)-> new Anime(title, episodes);
+//        BiFunction<String, Integer, Anime> animeBiFunction = (title,episodes)-> new Anime(title, episodes);
         BiFunction<String, Integer, Anime> animeBiFunction2 = Anime::new;
 
     }

@@ -1,4 +1,4 @@
-package javaviradonojiraya.javacore.ZZClambdas.Test;
+package javaviradonojiraya.javacore.ZZClambdas.test;
 
 import java.util.List;
 import java.util.function.Consumer;

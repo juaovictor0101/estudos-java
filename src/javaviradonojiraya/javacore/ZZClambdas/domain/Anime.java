@@ -1,4 +1,4 @@
-package javaviradonojiraya.javacore.ZZClambdas.Domain;
+package javaviradonojiraya.javacore.ZZClambdas.domain;
 
 public class Anime {
     private String title;

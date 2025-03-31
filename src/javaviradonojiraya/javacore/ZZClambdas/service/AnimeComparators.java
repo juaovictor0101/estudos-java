@@ -1,6 +1,6 @@
-package javaviradonojiraya.javacore.ZZClambdas.Service;
+package javaviradonojiraya.javacore.ZZClambdas.service;
 
-import javaviradonojiraya.javacore.ZZClambdas.Domain.Anime;
+import javaviradonojiraya.javacore.ZZClambdas.domain.Anime;
 
 public class AnimeComparators {
     public static int compareByTitle(Anime a1, Anime a2){
