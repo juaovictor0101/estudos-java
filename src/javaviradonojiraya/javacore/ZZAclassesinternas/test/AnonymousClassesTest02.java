@@ -1,7 +1,7 @@
 package javaviradonojiraya.javacore.ZZAclassesinternas.test;
 
 
-import javaviradonojiraya.javacore.Zgenerics.Domain.Barco;
+import javaviradonojiraya.javacore.Zgenerics.domain.Barco;
 
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -3,7 +3,7 @@ package javaviradonojiraya.javacore.Npolimorfismo.test;
 import javaviradonojiraya.javacore.Npolimorfismo.domain.Computador;
 import javaviradonojiraya.javacore.Npolimorfismo.domain.Televisao;
 import javaviradonojiraya.javacore.Npolimorfismo.domain.Tomate;
-import javaviradonojiraya.javacore.Npolimorfismo.servico.CalculadoraImposto;
+import javaviradonojiraya.javacore.Npolimorfismo.service.CalculadoraImposto;
 
 public class ProdutoTeste01 {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package javaviradonojiraya.javacore.ZZFthreads.test;
 
-import javaviradonojiraya.javacore.ZZFthreads.Services.EmailDeliveryService;
+import javaviradonojiraya.javacore.ZZFthreads.services.EmailDeliveryService;
 import javaviradonojiraya.javacore.ZZFthreads.domain.Members;
 
 import javax.swing.*;
