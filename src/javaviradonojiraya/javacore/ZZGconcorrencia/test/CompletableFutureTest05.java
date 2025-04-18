@@ -15,8 +15,6 @@ public class CompletableFutureTest05 {
 
 
     }
-
-
     private static void searchPricesWithDiscountAsync(StoreServiceWithDiscount service) {
         long start = System.currentTimeMillis();
         List<String> stores = List.of("Store 1", "Store 2", "Store 3", "Store 4");
