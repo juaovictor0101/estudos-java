@@ -1,7 +1,7 @@
 package javaviradonojiraya.javacore.ZZHpadroesdeprojeto.domain;
 
 public class CurrencyFactory {
-    public Currency newCurrency (Country country){
+    public static Currency newCurrency (Country country){
         switch (country){
             case USA:
                 return  new UsDollar();
