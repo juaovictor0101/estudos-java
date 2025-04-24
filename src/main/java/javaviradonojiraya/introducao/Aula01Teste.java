@@ -8,7 +8,7 @@ public class Aula01Teste {
         multiplas linhas
         */
 
-        System.out.println ("Salve tropa");
+        System.out.println("Hello world!");
     }
 }
 

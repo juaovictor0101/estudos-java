@@ -14,7 +14,7 @@ public class ResourceBundleTest01 {
         bundle = ResourceBundle.getBundle("messages", new Locale("en", "US"));
         System.out.println("---------------------------");
         System.out.println(bundle.getString("hello"));
-        System.out.println(bundle.getString("good.morning"));git 
+        System.out.println(bundle.getString("good.morning"));
         System.out.println(bundle.getString("hi"));
 
         // Locale ("fr" , "CA");
