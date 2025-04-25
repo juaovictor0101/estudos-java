@@ -1,6 +1,6 @@
 # 📚 Repositório de Estudos em Java
 
-Este repositório tem como objetivo reunir meus estudos e práticas em Java, desde os conceitos mais básicos até tópicos mais avançados como concorrência. Ideal para quem está aprendendo ou quer revisar conteúdos fundamentais da linguagem Java.
+Este repositório tem como objetivo reunir meus estudos e práticas em Java, desde os conceitos mais básicos até tópicos mais avançados.
 
 ---
 
