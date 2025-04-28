@@ -16,18 +16,37 @@ public class ProducerService {
         requireValidId(id);
         ProducerRepository.delete(id);
     }
+
     public static void update(Producer producer) {
         requireValidId(producer.getId());
         ProducerRepository.update(producer);
     }
 
-    private static void requireValidId(Integer id ){
+    private static void requireValidId(Integer id) {
         if (id == null || id <= 0) {
             throw new IllegalArgumentException("Invalid value for Id");
         }
     }
 
-    public static List <Producer> findAll() {
+    public static List<Producer> findAll() {
         return ProducerRepository.findAll();
+    }
+
+    public static List<Producer> findByname(String name) {
+        return ProducerRepository.findByName(name);
+    }
+
+    public static void shorProduceMetaData() {
+        ProducerRepository.showProducerMetaData();
+    }
+    public static void showDriveMetaData() {
+        ProducerRepository.showDriverMetaData();
+    }
+    public static void showTypeScrollWorking() {
+        ProducerRepository.showTypeScrollWorking();
+    }
+
+    public static List<Producer> findByNameAndUpdateToUpperCase(String name) {
+        return ProducerRepository.findByNameAndUpdateToUpperCase(name);
     }
 }

@@ -11,9 +11,15 @@ public class ConnectionFactoryTest04 {
     public static void main(String[] args) {
        Producer producerToUpdate = Producer.builder().id(2).name("NHK").build();
 //        ProducerService.update(producerToUpdate);
-        List<Producer> producers = ProducerService.findAll();
+//        List<Producer> producers = ProducerService.findByname("Ei");
+//        List<Producer> producers = ProducerService.findAll();
+//        log.info("Producers found '{}' ", producers);
 
-        log.info("Producers found '{}' ", producers);
+//        ProducerService.shorProduceMetaData();
+//        ProducerService.showDriveMetaData();
+//        ProducerService.showTypeScrollWorking();
+        List<Producer> prod = ProducerService.findByNameAndUpdateToUpperCase("Ma");
+        log.info("Producers found '{}' ", prod);
     }
 
 
