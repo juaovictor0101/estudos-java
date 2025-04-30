@@ -12,11 +12,11 @@ public class ConnectionFactoryTest05 {
 //        List<Producer> producers = ProducerRepositoryRowSet.findByNameJdbcRowSet("NHK");
 //       log.info(producers);
 
-        Producer producerToUpdate = Producer.builder().id(2).name("NHK").build();
-        ProducerRepositoryRowSet.UpdateJdbcRowSet(producerToUpdate);
-        log.info("-------------");
-        List<Producer> producers = ProducerRepositoryRowSet.findByNameJdbcRowSet("");
-        log.info(producers);
+        Producer producerToUpdate = Producer.builder().id(2).name("NHK2").build();
+        ProducerRepositoryRowSet.UpdateCachedRowSet(producerToUpdate);
+//        log.info("-------------");
+//        List<Producer> producers = ProducerRepositoryRowSet.findByNameJdbcRowSet("");
+//        log.info(producers);
 
 
     }
