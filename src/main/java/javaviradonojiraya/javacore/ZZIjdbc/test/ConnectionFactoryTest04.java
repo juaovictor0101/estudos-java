@@ -9,7 +9,7 @@ import java.util.List;
 @Log4j2
 public class ConnectionFactoryTest04 {
     public static void main(String[] args) {
-       Producer producerToUpdate = Producer.builder().id(2).name("nhk").build();
+        Producer producerToUpdate = Producer.builder().id(2).name("nhk").build();
 //        ProducerService.update(producerToUpdate);
 //        List<Producer> producers = ProducerService.findByname("Ei");
 //        List<Producer> producers = ProducerService.findAll();
@@ -23,7 +23,10 @@ public class ConnectionFactoryTest04 {
 //        ProducerService.findByNameAndDelete("Kentaro Miura");
 //        List<Producer> producers = ProducerService.findByNamePreparedStatement("M or X'='X");
 //        log.info("Producers found '{}' ", producers);
-        ProducerService.updatePreparedStatement(producerToUpdate);
+//        ProducerService.updatePreparedStatement(producerToUpdate);
+        List<Producer> producers = ProducerService.findByNameCallableStatement("sasa");
+        log.info("Producers found '{}' ", producers);
+
     }
 
 

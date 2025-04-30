@@ -45,6 +45,10 @@ public class ProducerService {
         return ProducerRepository.findByNamePreparedStatement(name);
     }
 
+    public static List<Producer> findByNameCallableStatement(String name) {
+        return ProducerRepository.findByNameCallableStatement(name);
+    }
+
     public static void shorProduceMetaData() {
         ProducerRepository.showProducerMetaData();
     }

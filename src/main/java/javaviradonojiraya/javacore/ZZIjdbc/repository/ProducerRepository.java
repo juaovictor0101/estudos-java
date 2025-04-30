@@ -291,10 +291,38 @@ public class ProducerRepository {
         return producers;
     }
 
+    //usado quando é preciso fazer chamadas a funções ou procedures SQL
+    public static List<Producer> findByNameCallableStatement(String name) {
+        log.info("Finding producer by name");
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = callableStatemenFindByName(conn, name);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                Producer producer = Producer
+                        .builder()
+                        .id(rs.getInt("id"))
+                        .name(rs.getString("name"))
+                        .build();
+                producers.add(producer);
+            }
+        } catch (SQLException e) {
+            log.error("Error while trying to dele this producer '{}'", e);
+        }
+        return producers;
+    }
+
     private static PreparedStatement preparedStatemenFindByName(Connection conn, String name) throws SQLException {
         String sql = "SELECT * FROM anime_store.producer WHERE name LIKE ?;";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1,String.format("%%%s%%", name));
         return ps;
+    }
+    private static CallableStatement callableStatemenFindByName(Connection conn, String name) throws SQLException {
+        String sql = "CALL `anime_store`.`sp_get_producer_by_name`(?);";
+        CallableStatement cs = conn.prepareCall(sql);
+        cs.setString(1,String.format("%%%s%%", name));
+        return cs;
     }
 }
