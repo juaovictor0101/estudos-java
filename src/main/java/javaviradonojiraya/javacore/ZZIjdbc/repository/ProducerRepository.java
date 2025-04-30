@@ -22,6 +22,37 @@ public class ProducerRepository {
 
     }
 
+    public static void saveTransaction(List<Producer> producers) {
+        try (Connection conn = ConnectionFactory.getConnection()) {
+            conn.setAutoCommit(false);
+            preparedStatementSaveTransactio(conn, producers);
+            conn.commit();
+            conn.setAutoCommit(true);
+        } catch (SQLException e) {
+            log.error("Error while trying to save producers '{}'", producers, e);
+        }
+    }
+
+    private static void preparedStatementSaveTransactio(Connection conn, List<Producer> producers) throws SQLException {
+        String sql = "INSERT INTO `anime_store`.`producer` (`name`) VALUES ( ? );";
+        boolean shouldRollBack = false;
+        for (Producer p : producers) {
+            try (PreparedStatement ps = conn.prepareStatement(sql)) {
+                log.info("Saving producer '{}'", p.getName());
+                ps.setString(1, p.getName());
+//                if(p.getName().equals("Anderson Silva")) throw new SQLException("Cant save Anderson Silva");
+                ps.execute();
+            }catch (SQLException e){
+                e.printStackTrace();
+                shouldRollBack = true;
+            }
+        }
+        if(shouldRollBack) {
+            log.warn("Transaction is going to be rollback");
+            conn.rollback();
+        }
+    }
+
     public static void delete(int id) {
         String sql = "DELETE FROM `anime_store`.`producer` WHERE (`id` = '%d');".formatted(id);
         try (Connection conn = ConnectionFactory.getConnection();
@@ -45,7 +76,7 @@ public class ProducerRepository {
         }
     }
 
-    public static void updatePreparedStatement (Producer producer) {
+    public static void updatePreparedStatement(Producer producer) {
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement ps = preparedStatementUpdate(conn, producer)) {
             int rowsAffected = ps.executeUpdate();
@@ -316,13 +347,14 @@ public class ProducerRepository {
     private static PreparedStatement preparedStatemenFindByName(Connection conn, String name) throws SQLException {
         String sql = "SELECT * FROM anime_store.producer WHERE name LIKE ?;";
         PreparedStatement ps = conn.prepareStatement(sql);
-        ps.setString(1,String.format("%%%s%%", name));
+        ps.setString(1, String.format("%%%s%%", name));
         return ps;
     }
+
     private static CallableStatement callableStatemenFindByName(Connection conn, String name) throws SQLException {
         String sql = "CALL `anime_store`.`sp_get_producer_by_name`(?);";
         CallableStatement cs = conn.prepareCall(sql);
-        cs.setString(1,String.format("%%%s%%", name));
+        cs.setString(1, String.format("%%%s%%", name));
         return cs;
     }
 }
